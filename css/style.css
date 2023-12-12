@@ -1,23 +1,155 @@
+/* Basic reset */
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Use a simple font */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+    font-family: Arial, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+/* Container for content alignment */
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.container h2{
+    width: 40%;
 }
 
-p {
-  margin: 0;
+/* Style the header */
+header {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+    text-transform: uppercase;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.container-header {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.about-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contact-details{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-details p{
+    width: 95%;
+}
+.social-link{
+    width: 95%;
+}
+
+
+/* Navigation styling */
+nav{
+    padding-top: 10px;
+    float: right;
+    background: #333;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero section */
+#hero {
+    background: url('../images/02-hero-bg.jpg') no-repeat center center/cover;
+    color: gray;
+    padding: 2em 0;
+    text-align: center;
+    text-decoration:overline;
+}
+
+
+/* About section */
+#about {
+    padding: 2em 0;
+    
+}
+
+.avatar {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Work section */
+#work {
+    padding: 2em 0;
+}
+
+#work h2{
+    padding-bottom: 1em;
+}
+
+.featured-work img {
+    width: 100%;
+    height: 100%;
+}
+
+.featured-work h3 {
+    padding-bottom: 2em;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.project img {
+    width: 100%;
+    height: 95%;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    nav{
+        float:none;
+    } 
+
+    .container-header {
+        text-align: center; 
+    }
+
+    .container{
+        display: block;
+    }
+
 }
